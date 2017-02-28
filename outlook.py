@@ -28,7 +28,8 @@ outlook = win32.Dispatch('outlook.application')  # dynamic dispatch -> this is a
 # no special knowledge of this obj besides the name that you gave it
 
 count = 1
-while count < 2: #  iterate over how many times you want to send the mail
+sendrange = count + 1
+while count < sendrange: #  iterate over how many times you want to send the mail
     mail = outlook.CreateItem(0)  # in VBA, 0 is for olMailItem object
     mail.To = 'recipient1; recipient2'
     mail.Subject = 'test from python # ' + str(count)
