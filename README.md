@@ -11,6 +11,8 @@ Send mails using the local Outlook profile
 
 -a attachment
 
+Tested on Windows 10 with Outlook 2013
+
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 winharvest.py
@@ -22,5 +24,6 @@ Writes Excel file with the following info:
 - list of installed software and its version
 - total number of installed programs
 
+Tested on Windows XP, 7, 10
 
 
