@@ -17,15 +17,17 @@ def urlEncode(payload):
 def htmlEncode(payload):
     #return html.escape(payload)
     encoded = html.escape(payload)
-    return encoded.encode('ascii', 'xmlcharrefreplace')
+    html_enc = encoded.encode('ascii', 'xmlcharrefreplace')
+    return html_enc.decode("UTF-8")
 
 
 def hexEncode(payload):
     hex_str = binascii.hexlify(payload.encode('ascii'))
-    return hex_str
+    return hex_str.decode("UTF-8")
 
 def base64Encode(payload):
-    return base64.b64encode(payload.encode('ascii'))
+    b64_enc = base64.b64encode(payload.encode('ascii'))
+    return b64_enc.decode("UTF-8")
 
 
 encode = input('Drop payload here:\n')
